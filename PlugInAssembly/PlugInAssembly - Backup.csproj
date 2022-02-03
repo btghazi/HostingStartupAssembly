@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<!--<BaseOutputPath>C:\Work\samples\HostringAssemblySolution\HostingAssemblyDemo\bin</BaseOutputPath>-->
+		<BaseOutputPath>$(SolutionDir)HostingAssemblyDemo\bin</BaseOutputPath>		
+		<ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+		<EnableDynamicLoading>true</EnableDynamicLoading>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+	</ItemGroup>
+
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+	  <Exec Command="Echo Begin&#xD;&#xA;Echo Configuration = $(Configuration)&#xD;&#xA;Echo DevEnvDir = $(DevEnvDir)&#xD;&#xA;Echo FrameworkDir = $(FrameworkDir)&#xD;&#xA;Echo FrameworkSDKDir = $(FrameworkSDKDir)&#xD;&#xA;Echo FrameworkVersion = $(FrameworkVersion)&#xD;&#xA;Echo FxCopDir = $(FxCopDir)&#xD;&#xA;Echo IntDir = $(IntDir)&#xD;&#xA;Echo OutDir = $(OutDir)&#xD;&#xA;Echo Platform = $(Platform)&#xD;&#xA;Echo PlatformShortName = $(PlatformShortName)&#xD;&#xA;Echo ProjectDir = $(ProjectDir)&#xD;&#xA;Echo ProjectExt = $(ProjectExt)&#xD;&#xA;Echo ProjectFileName = $(ProjectFileName)&#xD;&#xA;Echo ProjectName = $(ProjectName)&#xD;&#xA;Echo ProjectPath = $(ProjectPath)&#xD;&#xA;Echo PublishDir = $(PublishDir)&#xD;&#xA;Echo RemoteMachine = $(RemoteMachine)&#xD;&#xA;Echo RootNameSpace = $(RootNameSpace)&#xD;&#xA;Echo SolutionDir = $(SolutionDir)&#xD;&#xA;Echo SolutionExt = $(SolutionExt)&#xD;&#xA;Echo SolutionFileName = $(SolutionFileName)&#xD;&#xA;Echo SolutionName = $(SolutionName)&#xD;&#xA;Echo SolutionPath = $(SolutionPath)&#xD;&#xA;Echo TargetDir = $(TargetDir)&#xD;&#xA;Echo TargetExt = $(TargetExt)&#xD;&#xA;Echo TargetFileName = $(TargetFileName)&#xD;&#xA;Echo TargetName = $(TargetName)&#xD;&#xA;Echo TargetPath = $(TargetPath)&#xD;&#xA;Echo VCInstallDir = $(VCInstallDir)&#xD;&#xA;Echo VSInstallDir = $(VSInstallDir)&#xD;&#xA;Echo WebDeployPath = $(WebDeployPath)&#xD;&#xA;Echo WebDeployRoot = $(WebDeployRoot)&#xD;&#xA;echo $(OutputPath)&#xD;&#xA;Echo End&#xD;&#xA;" />
+	</Target>
+
+</Project>

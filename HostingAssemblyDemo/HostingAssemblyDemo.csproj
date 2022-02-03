@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+	</ItemGroup>
+
+	<!--<ItemGroup>
+		<Reference Include="C:\\Work\\samples\\HostringAssemblySolution\\PlugInAssembly\\bin\\Debug\\net5.0\\PlugIn*.dll">
+			<HintPath>C:\Work\samples\HostringAssemblySolution\PlugInAssembly\bin\Debug\net5.0\PlugIn*.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+		</Reference>
+	</ItemGroup>
+
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+	  <Exec Command="echo $(ProjectDir)$OutDir()\\PlugIn*.dll" />
+	</Target>-->
+
+
+	<ItemGroup>
+		<Reference Include="$(ProjectDir)$(OutDir)\\PlugIn*.dll">
+			<HintPath>$(ProjectDir)$(OutDir)\PlugIn*.dll</HintPath>
+			<SpecificVersion>False</SpecificVersion>
+		</Reference>
+	</ItemGroup>
+
+
+
+</Project>

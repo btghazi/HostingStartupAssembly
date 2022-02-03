@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+	  <!--<BaseOutputPath>C:\Work\samples\HostringAssemblySolution\HostingAssemblyDemo\bin</BaseOutputPath>-->
+	  <BaseOutputPath>$(SolutionDir)HostingAssemblyDemo\bin</BaseOutputPath>
+	  <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+	  <EnableDynamicLoading>true</EnableDynamicLoading>
+  </PropertyGroup>
+
+</Project>
